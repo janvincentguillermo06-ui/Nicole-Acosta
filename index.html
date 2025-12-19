@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seanrob Tee — Portfolio</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Seanrob<span class="dot">.</span></div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="main-nav" data-visible="false">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Left vertical social bar -->
+    <aside class="social-bar" aria-hidden="false">
+    <a class="social" href="https://www.instagram.com/syannnn_04" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </a>
+    <a class="social" href="https://www.facebook.com/share/1R878cRb1W/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 11v6M8 8v.01M12 11v6M16 11v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </a>
+    <a class="social" href="https://www.facebook.com/share/19ppEre3Cd/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 3.1 2 5.7 4.7 6.6.4.1.5-.2.5-.4v-1.4c-1.9.4-2.3-.9-2.3-.9-.3-.7-.8-1.1-.8-1.1-.6-.4.1-.4.1-.4.7.1 1.1.7 1.1.7.6 1 1.5.7 1.9.5.1-.4.2-.7.4-1-1.6-.2-3.3-.8-3.3-3.7 0-.8.3-1.4.7-1.9-.1-.2-.3-1 .1-2 0 0 .6-.2 2 .7a6.9 6.9 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1.1.2 1.8.1 2 .5.5.7 1.1.7 1.9 0 2.9-1.7 3.4-3.4 3.6.2.2.4.6.4 1.2v1.8c0 .2.1.5.5.4C17 14.7 19 12.1 19 9c0-3.9-3.1-7-7-7z" fill="currentColor"/></svg>
+    </a>
+  </aside>
+
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <section class="hero-left">
+        <h1 class="hi">Hello I'm <span class="name">Seanrob Tee</span> <span class="wave">👋</span></h1>
+        <div class="role-line">
+          <span class="role-underline"></span>
+                  </div>
+        <p class="intro">I'm Seanrob Tee BSIT-1A.</p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact Info</a>
+                  </div>
+
+        <p class="scroll-hint">Scroll down ↘</p>
+      </section>
+
+      <figure class="hero-right" aria-hidden="true">
+        <!-- organic blob with profile -->
+        <div class="blob">
+          <img src="tee.jpg" alt="Profile photo" />
+        </div>
+      </figure>
+    </div>
+  </main>
+
+  <!-- small sections to show structure -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>I like Fixing things and cooking </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <li>HTML</li>
+      <li>Fixing Phones</li>
+      <li>And Others</li>
+    </div>
+  </section>
+
+   <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="seanrobtee96@gmail.com">seanrobtee96@gmail.com</a></p>
+      <p>Facebook : <a href="https://www.facebook.com/share/1R878cRb1W/">Seanrob Tee</a></p>
+      <p>Instagram : <a href="https://www.instagram.com/syannnn_04">Seanrob Tee</a></p>
+      <p><a href="https://www.facebook.com/share/19ppEre3Cd/">If you can't contact me please contact my friend click me</a></p>
+
+    </div>
+  </section>
+
+  <!-- optional decorative background using the other image -->
+  <div class="decor-image" aria-hidden="true">
+    <img src="sksu1.png" alt="" />
+  </div>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const primaryNav = document.getElementById('primary-navigation');
+    navToggle.addEventListener('click', () => {
+      const visibility = primaryNav.getAttribute('data-visible');
+      if (visibility === "false") {
+        primaryNav.setAttribute('data-visible', 'true');
+        navToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        primaryNav.setAttribute('data-visible', 'false');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Close nav menu on link click for mobile
+        if (primaryNav.getAttribute('data-visible') === "true") {
+          primaryNav.setAttribute('data-visible', 'false');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
